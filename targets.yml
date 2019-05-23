@@ -1,0 +1,13 @@
+login:
+  username: email
+  password: pass
+  form: login_form
+global:
+  top: pagelet_bluebar
+  dock: pagelet_dock
+  sidebar: pagelet_sidebar
+  leftColumn: leftCol
+  rightColumn: rightCol
+group: 
+  expandSeeMore: _5v47
+  expandThreads: _4sxd
