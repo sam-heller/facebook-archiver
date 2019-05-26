@@ -7,17 +7,26 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     rake (12.3.2)
-    rubyzip (1.2.2)
+    regexp_parser (1.5.1)
+    rubyzip (1.2.3)
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
+    watir (6.16.5)
+      regexp_parser (~> 1.2)
+      selenium-webdriver (~> 3.6)
+    webdrivers (3.9.4)
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.0)
+      selenium-webdriver (~> 3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   nokogiri
-  selenium-webdriver
+  watir
+  webdrivers
 
 RUBY VERSION
    ruby 2.6.2p47

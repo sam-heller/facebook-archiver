@@ -1,0 +1,31 @@
+scrollToBottom: window.scrollTo(0, document.body.scrollHeight);return document.body.scrollHeight;
+getOldestEntryDate: ts = document.querySelectorAll('abbr._5ptz');return ts[ts.length -1].getAttribute('data-utime');
+expandSeeMore: tmp = document.querySelectorAll('._5v47');for (let t of tmp){t.click();}; return tmp.length;
+expandThreads: tmp = document.querySelectorAll('._5v47');for (let t of tmp){t.click();}; return tmp.length;
+expandReactions: tmp = document.querySelector('.uiMorePagerPrimary'); if (tmp !== null){tmp.click()}; return tmp !== null;
+getReactions: |
+            function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+            async function getReactions(){
+              react = {};
+              for (let e of document.querySelectorAll('._ds-')){
+                  v = e.querySelector('span > span'); v.click();
+                  morePager = document.querySelector('.uiMorePagerPrimary');
+                  if (morePager !== null){morePager.click()}
+                  await sleep(2000)
+                  arr = v.getAttribute('aria-label').split(" ");
+                  if (arr.length == 5){
+                      react[arr[4]] = [];
+                      for (let usr of document.querySelectorAll('._5i_p:not(.hidden_elem) > ul > li')){
+                          username = usr.querySelector('a').getAttribute('href').replace(/http.*com\//, '').replace(/\?.*/, '');
+                          if (username == 'profile.php'){
+                              username = usr.querySelector('a').getAttribute('href').replace(/http.*id=/, '').replace(/&.*/, '');
+                          }
+                          react[arr[4]].push(username)
+                      }
+                  }
+              }
+              return react;
+            }
+            await return getReactions();
+            
+

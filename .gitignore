@@ -17,4 +17,5 @@ config.yml
 /vendor/bundle
 /lib/bundler/man/
 
-
+graveyard.rb
+out.json

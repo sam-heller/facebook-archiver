@@ -1,0 +1,7 @@
+username: your@name-here.com
+password: nope
+driverOptions: 
+  - headless
+path:
+  targets: config/targets.yml
+  javascript: config/javascript.yml

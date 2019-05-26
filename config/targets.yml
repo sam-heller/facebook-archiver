@@ -1,0 +1,30 @@
+login:
+  username: m_login_email
+  password: m_login_password
+  submit_text: Log In
+global:
+  top: pagelet_bluebar
+  dock: pagelet_dock
+  sidebar: pagelet_sidebar
+  leftColumn: leftCol
+  rightColumn: rightCol
+group: 
+  expandSeeMore: ._5v47
+  expandThreads: ._4sxd
+  linkToDetailPage: ._5pcq
+  threadDetailWrapper: .userContentWrapper
+  detailPage: 
+    loadReactionsLink: ._1lha
+    reactionsDetailModal: ._5i_q
+    mainPost: .userContentWrapper > div > div:nth-child(2)
+    postInfo: 
+      body: div:nth-child(1)
+      authorName: h5 > span > span > a # split href for permalink, 
+      datePosted: abbr._5ptz
+      authorPicture: img
+      postContent:  div:nth-child(2)
+    postResponses:
+      wrapper: .userContentWrapper > div > div:nth-child(2)
+      postReactionsLink: ._585-
+      postReactionsListItems: ._5i_q
+      postReactionsLoadMore: .uiMorePagerPrimary
